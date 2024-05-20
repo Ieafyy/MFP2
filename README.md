@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+Esse é um projeto pessoal que tem como objetivo complementar e trazer um novo contexto para o projeto [MyfitnessPal++](https://github.com/Ieafyy/MyfitnessPal-). Aqui desenvolvi uma interface para que o sistema possa ser usado através de uma aplicação nativa para sistemas mobile.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![alt text](imgs/image.png)
 
-## Get started
+O backend segue sendo o mesmo utilizado pelo sistema web, desenvolvido em python (e hospedado pelo Vercel). Para a criação do app usei React Native (typescript).
 
-1. Install dependencies
+## Setup do ambiente
 
-   ```bash
-   npm install
-   ```
+Para trazer essa solução para um ambiente mais real hospedei o backend na plataforma da vercel
 
-2. Start the app
+![alt text](imgs/image-1.png)
 
-   ```bash
-    npx expo start
-   ```
+Entretanto, essa alternativa nem sempre fica funcional e constantemente apresenta erros. Sendo assim, a melhor opção é rodar o backend localmente. Para que isso seja possível, no arquivo `index.tsx` altere o valor de `local` para true:
 
-In the output, you'll find options to open the app in a
+![alt text](imgs/image-2.png)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Agora basta iniciar o backend seguindo o mesmo passo a passo do [outro repositório](https://github.com/Ieafyy/MyfitnessPal-).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Iniciando a aplicação
 
-## Get a fresh project
-
-When you're ready, run:
+O sistema foi montado usando o expo para facilitar o compartilhamento e desenvolvimento. Para executar o sistema basta executar dentro da pasta raiz:
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Se tudo tiver ok, o terminal irá apresentar um QR Code onde ao scanear usando o aplicativo do Expo Go no seu celular, irá executar o MFP no mesmo.
 
-## Learn more
+![alt text](imgs/image-3.png)
 
-To learn more about developing your project with Expo, look at the following resources:
+![alt text](imgs/image-4.png)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![alt text](imgs/image-5.png)
 
-## Join the community
+![alt text](imgs/image-6.png)
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+As funcionalidades são similares ao sistema web, com enfoque especial na parte de notificação aonde é alertado para o usuário sua meta e qual o estado que se encontra.

@@ -18,6 +18,8 @@ Notifications.setNotificationHandler({
   }),
 });
 
+const local = false;
+
 export default function Index() {
   const [data, setData] = useState({});
   const [nome, setNome] = useState("RaphaelRamalho");
@@ -29,7 +31,9 @@ export default function Index() {
 
   const handleClick = async () => {
     const { status } = await Notifications.getPermissionsAsync();
-    const url = "https://mfp2.vercel.app/getdata";
+    const url = local
+      ? "http://192.168.0.14:5000/getdata"
+      : "https://mfp2.vercel.app/getdata";
     setLoading(true);
 
     console.log(url + "?userid=" + nome + "&date=" + strDate);
